@@ -1,4 +1,4 @@
-let myLibrary = []
+var library = []
 
 function Book(title, author, pages, read) {
 	this.title = title
@@ -7,22 +7,34 @@ function Book(title, author, pages, read) {
 	this.read = read
 }
 
-function addBookToLibrary(title, author, pages, read) {
-	myLibrary.push(new Book(title, author, pages, read))
+function changeReadStatus(book) {
+
 }
 
-function drawBooksToScreen() {
-	myLibrary.forEach(item => {
-		let book = document.createElement('div')
-		book.innerHTML = 
-			`<p class="card-text">${item.title}</p>` +
-			`<p class="card-text">${item.author}</p>` +
-			`<p class="card-text">${item.pages} Pages</p>`
-		bookList.append(book)
-	})
+function updateScreen() {
+  library.forEach()
 }
 
-const bookList = document.querySelector('.books')
-addBookToLibrary('The Hobbit', 'J.R.R Tolkien', 295, false)
-addBookToLibrary('Gardens of the Moon', 'S. Erikson', 657, true)
-drawBooksToScreen()
+const form = document.querySelector('form')
+form.addEventListener('submit', function(e) {
+	e.preventDefault()
+  new FormData(form)
+  form.reset()
+})
+
+form.addEventListener('formdata', function(e) {
+  var formData = e.formData
+
+	for (var value of formData.entries()) {
+		console.log(value)
+		if (value[0] === 'bookTitle') {
+			var title = value[1]
+		} else if (value[0] === 'bookAuthor') {
+			var author = value[1]
+		} else if (value[0] === 'bookPages') {
+			var pages = value[1]
+		}
+	}
+  var book = new Book(title, author, pages, document.getElementById('bookRead').checked)
+  library.push(book)
+})

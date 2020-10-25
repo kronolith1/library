@@ -2,19 +2,36 @@
 <html>
     <head>
         <title>Library</title>
-
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header>
-
         </header>
 
-        <main>
-          <div class="books">
+        <main class="content">
+            <div class="bookDiv">
 
-          </div>
+            </div>
+
+            <div class="createDiv">
+                <form name="createBookForm" class="center">
+                    <label for="bookTitle"><b>Title:</b></label>
+                    <input type="text" placeholder="Enter book title..." name="bookTitle" id="bookTitle" required>
+    
+                    <label for="bookAuthor"><b>Author:</b></label>
+                    <input type="text" placeholder="Enter author name..." name="bookAuthor" id="bookAuthor" required>
+    
+                    <label for="bookPages"><b>Pages:</b></label>
+                    <input type="text" placeholder="Enter amount of pages..." name="bookPages" id="bookPages" required>
+    
+                    <label for="bookRead"><b>Read:</b></label>
+                    <input type="checkbox" placeholder="Enter book title..." name="bookRead" id="bookRead">
+                    
+                    <label for="createButton"><b>Add new book</b></label>
+                    <input type="submit" id="createButton">
+                </form>
+            </div>
         </main>
     </body>
     <script type="text/javascript" src="script.js"></script>

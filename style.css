@@ -1,0 +1,19 @@
+body {
+    font: normal 14px Verdana, Arial, sans-serif;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #66ffff;
+}
+
+
+.tableDiv {
+    padding-top: 50px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
